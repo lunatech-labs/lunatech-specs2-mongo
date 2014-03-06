@@ -1,3 +1,5 @@
+package com.lunatech.specs2mongo
+
 import de.flapdoodle.embed.mongo.config.{RuntimeConfigBuilder, MongodConfigBuilder}
 import de.flapdoodle.embed.mongo.distribution.Version
 import de.flapdoodle.embed.mongo.{Command, MongodStarter}
