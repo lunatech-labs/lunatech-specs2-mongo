@@ -10,7 +10,7 @@ import org.specs2.specification.{Step, Fragments}
 
 trait TempMongo extends Specification {
 
-  def mongoVersion = Version.Main.V2_4
+  def mongoVersion = Version.Main.V3_0
 
   private lazy val runtimeConfig: IRuntimeConfig = new RuntimeConfigBuilder()
     .defaults(Command.MongoD)
