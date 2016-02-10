@@ -7,7 +7,7 @@ description := "Tools that allow specs2 tests to use their own MongoDB instance"
 crossScalaVersions := Seq("2.10.5", "2.11.6")
 
 libraryDependencies ++= Seq(
-  "org.specs2" %% "specs2" % "2.3.13" % "provided",
+  "org.specs2" %% "specs2-core" % "3.6" % "provided",
   "de.flapdoodle.embed" % "de.flapdoodle.embed.mongo" % "1.47.3"
 )
 

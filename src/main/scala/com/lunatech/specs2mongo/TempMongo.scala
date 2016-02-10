@@ -6,7 +6,7 @@ import de.flapdoodle.embed.mongo.{Command, MongodStarter}
 import de.flapdoodle.embed.process.config.io.ProcessOutput
 import de.flapdoodle.embed.process.config.IRuntimeConfig
 import org.specs2.mutable.Specification
-import org.specs2.specification.{Step, Fragments}
+import org.specs2.specification.core.Fragments
 
 trait TempMongo extends Specification {
 
@@ -25,5 +25,5 @@ trait TempMongo extends Specification {
 
   lazy val tempMongo = Seq("mongodb.servers" -> List(s"${mongodConfig.net().getServerAddress.getHostName}:${mongodConfig.net().getPort}")).toMap
 
-  override def map(fs: => Fragments): Fragments = Step(mongodExecutable.start()) ^ fs ^ Step(mongodExecutable.stop())
+  override def map(fs: => Fragments): Fragments = step(mongodExecutable.start()) ^ fs ^ step(mongodExecutable.stop())
 }
